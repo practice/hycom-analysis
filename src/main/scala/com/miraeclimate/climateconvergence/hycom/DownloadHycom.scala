@@ -3,7 +3,7 @@ package com.miraeclimate.climateconvergence.hycom
 import java.io.{File, PrintWriter, StringWriter}
 
 import akka.actor.Actor.Receive
-import akka.actor.{ActorRef, Actor, Props, ActorSystem}
+import akka.actor._
 import org.joda.time.DateTime
 
 /**
@@ -11,11 +11,13 @@ import org.joda.time.DateTime
  */
 
 case object WhatIsNextDate
+case object DateEnded
 case class NextDate(exptName: String, year: Int, mt: Int, date: DateTime)
 case object StartMsg
 
-class DateProducer(startingDate: String) extends Actor {
+class DateProducer(kind: String, startingDate: String, endingDate: String, dnCount: Int) extends Actor {
   val startDate = new DateTime(startingDate)
+  val endDate = new DateTime(endingDate)
   /*
 expt_90.6
   2008: 0..104
@@ -44,20 +46,39 @@ expt_91.1
   val exptStart = new DateTime("2008-09-18")
   var expt = days.zipWithIndex.map(day => NextDate(day._1._1, day._1._2, day._1._3, exptStart.plusDays(day._2)))
 
-  // expt.foreach(println _)
-  expt = expt.filterNot(nextDate => nextDate.date.isBefore(startDate))
+  expt.foreach(println _)
+  expt = expt.filter(nextDate => !(nextDate.date.isBefore(startDate)))
+  expt = expt.filter(nextDate => !(nextDate.date.isAfter(endDate)))
   println(s"expt count = ${expt.length}")
 
+  var downloaderCount = dnCount
   override def receive: Receive = {
+    case StartMsg =>
+      println("building downloaders")
+      val downloaders = for (i <- 1 to downloaderCount) yield context.actorOf(Props(new Downloader(self, kind)), name=s"dl-$i")
+      downloaders.foreach(context.watch(_))
+      downloaders.foreach(_ ! StartMsg)
+    case Terminated(downloader) =>
+      println(downloader + " terminated")
+      downloaderCount -= 1
+      if (downloaderCount == 0) {
+        context.stop(self)
+        context.system.shutdown()
+      }
     case WhatIsNextDate =>
-      val head = expt.head
-      expt = expt.tail
-      sender ! head
-
+      if (expt.length > 0) {
+        val head = expt.head
+        expt = expt.tail
+        sender ! head
+      } else {
+        sender ! DateEnded
+      }
   }
 }
 
-class Downloader(dateProducer: ActorRef) extends Actor {
+class Downloader(dateProducer: ActorRef, kind: String) extends Actor {
+  val kindMap = Map("temp" -> "temp.ascii?temperature", "salt" -> "salt.ascii?salinity", "uvel" -> "uvel.ascii?u", "vvel" -> "vvel.ascii?v")
+
   def downloadForDate(exptName: String, year: Int, mt: Int, date: DateTime, tryCount: Int = 5) {
     if (date.getYear == 2015) {
       println("done.")
@@ -66,14 +87,15 @@ class Downloader(dateProducer: ActorRef) extends Actor {
     }
     Thread.sleep(200)
     val dateSeq = date.getDayOfYear
+    val kindPath = kindMap.get(kind).get
 
     println(f"downloading $year.${date.getMonthOfYear}.${date.getDayOfMonth}-${dateSeq}%03d from ${exptName},mt=${mt}")
 //                http://tds.hycom.org/thredds/dodsC/GLBa0.08/expt_90.6/2008/temp.ascii?temperature[0:1:0][0:1:0][0:1:0][0:1:0]
-    val url = f"http://tds.hycom.org/thredds/dodsC/GLBa0.08/${exptName}/${year}/temp.ascii?temperature[${mt}:1:${mt}][0:1:6][1819:1:2155][559:1:824]"
+    val url = f"http://tds.hycom.org/thredds/dodsC/GLBa0.08/${exptName}/${year}/${kindPath}[${mt}:1:${mt}][0:1:6][1819:1:2155][559:1:824]"
     // http://tds.hycom.org/thredds/dodsC/GLBa0.08/expt_91.1/2014/salt.ascii?salinity[0:1:0][0:1:6][1819:1:2155][559:1:824]
     // http://tds.hycom.org/thredds/dodsC/GLBa0.08/expt_91.1/2014/uvel.ascii?u[0:1:0][0:1:0][0:1:0][0:1:0]
     // http://tds.hycom.org/thredds/dodsC/GLBa0.08/expt_91.1/2014/vvel.ascii?v[0:1:0][0:1:0][0:1:0][0:1:0]
-    val outputPath = f"/Users/shawn/temp/hycom/download/temp/${year}/${year}-$dateSeq.txt"
+    val outputPath = f"/Users/shawn/temp/hycom/download/${kind}/${year}/${year}-${dateSeq}%03d.txt"
     try {
       val content = getUrl(url)
       writeFile(outputPath, content)
@@ -125,6 +147,8 @@ class Downloader(dateProducer: ActorRef) extends Actor {
     case NextDate(exptName: String, year: Int, mt: Int, date: DateTime) =>
       downloadForDate(exptName, year, mt, date)
       dateProducer ! WhatIsNextDate
+    case DateEnded =>
+      context.stop(self)
   }
 }
 
@@ -133,31 +157,10 @@ object DownloadHycom {
     // an actor needs an ActorSystem
     val system = ActorSystem("DownloadHycomSystem")
     // create and start the actor
-//    val dateProducer = system.actorOf(Props(new DateProducer("2008-09-18")), name = "DateProducer")
-    val dateProducer = system.actorOf(Props(new DateProducer("2012-07-21")), name = "DateProducer")
-    println("building downloaders")
-    val downloaders = for (i <- 1 to 10) yield system.actorOf(Props(new Downloader(dateProducer)), name=s"dl-$i")
-    downloaders.foreach(_ ! StartMsg)
-//    var a = Array(1,2,3,4)
-//    a = a.filter(_ > 2)
-//    a.foreach(println _)
-
-    // 2008.9.18 ~
-//    val exprDir = List("expt_90.3", "expt_90.6", "expt_90.8", "expt_90.9", "expt_91.0", "expt_91.1")
-
-    // url = "http://tds.hycom.org/thredds/dodsC/GLBa0.08/expt_91.1/2014/temp/archv.2014_095_00_3zt.nc.ascii?temperature[0:1:0][0:1:6][1819:1:2155][559:1:824]"
-//    val date = new DateTime("2008-09-18") // this is start date.
-    val date = new DateTime("2009-06-09") // this is start date.
-//    val date = new DateTime("2013-08-21") // this is start date.
-    println(date.getYear) // 2008
-    println(date.getMonthOfYear) // 9
-    println(date.getDayOfMonth) // 18
-    println(date.getDayOfYear) // 262
-
+    val dateProducer = system.actorOf(Props(new DateProducer("vvel", "2008-09-18", "2014-12-31", 10)), name = "DateProducer")
+    dateProducer ! StartMsg
     system.awaitTermination()
 
     system.shutdown()
   }
-  
-
 }
