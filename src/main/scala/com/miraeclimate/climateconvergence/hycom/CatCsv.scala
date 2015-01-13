@@ -11,8 +11,8 @@ object CatCsv {
   val baseDir = new File("/Users/shawn/temp/hycom")
 
   def main(args: Array[String]): Unit = {
-    // new File("/Users/shawn/temp/hycom/download").listFiles().toList.filter(_.isDirectory).foreach(processKindDirs(_))
-    renameFiles(new File("/Users/shawn/temp/hycom/download/temp/2009"))
+    new File("/Users/shawn/temp/hycom/download").listFiles().toList.filter(_.isDirectory).foreach(processKindDirs(_))
+    // renameFiles(new File("/Users/shawn/temp/hycom/download"))
   }
 
   def renameFiles(dir: File): Unit = {
@@ -24,7 +24,8 @@ object CatCsv {
       val fileNo: Int = name.substring(5).toInt
       val newFile = new File(dir, f"${dir.getName}-${fileNo}%03d${file.getName.substring(extpos)}")
       println(s"renaming ${file.getAbsolutePath} to ${newFile.getAbsolutePath}")
-      // file.renameTo(newFile)
+      if (newFile.getName != file.getName)
+        file.renameTo(newFile)
     }
   }
 

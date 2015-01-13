@@ -14,7 +14,7 @@ object SstByTrench {
 
     // Util.printAll(trenches)
 
-    for (year <- 2004 until 2014)
+    for (year <- 2014 to 2014)
       extractSst(trenches, "/Users/shawn/temp/nc.kr", s"sst.day.mean.${year}.v2.nc.kr")
   }
 
