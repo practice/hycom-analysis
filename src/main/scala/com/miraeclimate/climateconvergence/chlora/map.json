@@ -1,0 +1,946 @@
+{
+  "type": "Topology",
+  "objects": {
+    "azuremap": {
+      "type": "GeometryCollection",
+      "geometries": [
+        {
+          "type": "Point",
+          "id": "US East",
+          "properties": {
+            "geo": "United States",
+            "region": "US East",
+            "location": "Atlanta, GA",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            1390,
+            7300
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "US East",
+          "properties": {
+            "geo": "United States",
+            "region": "US East",
+            "location": "Atlanta, GA",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            1390,
+            7300
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "US East",
+          "properties": {
+            "geo": "United States",
+            "region": "US East",
+            "location": "Atlanta, GA",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            1390,
+            7300
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "US East",
+          "properties": {
+            "geo": "United States",
+            "region": "US East",
+            "location": "Atlanta, GA",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            1390,
+            7300
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "US North Central",
+          "properties": {
+            "geo": "United States",
+            "region": "US North Central",
+            "location": "Chicago, IL",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            1271,
+            8130
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "US South Central",
+          "properties": {
+            "geo": "United States",
+            "region": "US South Central",
+            "location": "Dallas, TX",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            936,
+            7201
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "US West",
+          "properties": {
+            "geo": "United States",
+            "region": "US West",
+            "location": "Los Angeles, CA",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            153,
+            7331
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "US West",
+          "properties": {
+            "geo": "United States",
+            "region": "US West",
+            "location": "San Jose, CA",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            20,
+            7666
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "US West",
+          "properties": {
+            "geo": "United States",
+            "region": "US West",
+            "location": "Seattle, WA",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            3,
+            8713
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Europe North",
+          "properties": {
+            "geo": "Europe",
+            "region": "Europe North",
+            "location": "Copenhagen, Denmark",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            4932,
+            9541
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Europe North",
+          "properties": {
+            "geo": "Europe",
+            "region": "Europe North",
+            "location": "Helsinki, Finland",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            5383,
+            9999
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Europe North",
+          "properties": {
+            "geo": "Europe",
+            "region": "Europe North",
+            "location": "Stockholm, Sweden",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            5133,
+            9912
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Europe North",
+          "properties": {
+            "geo": "Europe",
+            "region": "Europe North",
+            "location": "Vienna, Austria",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            5072,
+            8775
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Europe North",
+          "properties": {
+            "geo": "Europe",
+            "region": "Europe North",
+            "location": "Warsaw, Poland",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            5241,
+            9185
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Europe West",
+          "properties": {
+            "geo": "Europe",
+            "region": "Europe West",
+            "location": "Amsterdam, Netherlands",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            4651,
+            9196
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Europe West",
+          "properties": {
+            "geo": "Europe",
+            "region": "Europe West",
+            "location": "Frankfurt, Germany",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            4791,
+            8969
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Europe West",
+          "properties": {
+            "geo": "Europe",
+            "region": "Europe West",
+            "location": "Milan, Italy",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            4810,
+            8494
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Europe West",
+          "properties": {
+            "geo": "Europe",
+            "region": "Europe West",
+            "location": "London, England",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            4469,
+            9111
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Europe West",
+          "properties": {
+            "geo": "Europe",
+            "region": "Europe West",
+            "location": "Madrid, Spain",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            4338,
+            7981
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Europe West",
+          "properties": {
+            "geo": "Europe",
+            "region": "Europe West",
+            "location": "Paris, France",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            4559,
+            8841
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Asia Pacific East",
+          "properties": {
+            "geo": "Asia",
+            "region": "Asia Pacific East",
+            "location": "Batam, Indonesia",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            8275,
+            3964
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Asia Pacific East",
+          "properties": {
+            "geo": "Asia",
+            "region": "Asia Pacific East",
+            "location": "Hong Kong, China",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            8646,
+            6136
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Asia Pacific East",
+          "properties": {
+            "geo": "Asia",
+            "region": "Asia Pacific East",
+            "location": "Jakarta, Indonesia",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            8377,
+            3228
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Asia Pacific East",
+          "properties": {
+            "geo": "Asia",
+            "region": "Asia Pacific East",
+            "location": "Kaohsiung, Taiwan",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            8870,
+            6165
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Asia Pacific East",
+          "properties": {
+            "geo": "Asia",
+            "region": "Asia Pacific East",
+            "location": "Singapore",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            8268,
+            3993
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Asia Pacific Southeast",
+          "properties": {
+            "geo": "Asia",
+            "region": "Asia Pacific Southeast",
+            "location": "Melbourne, Australia",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            9772,
+            0
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Asia Pacific Southeast",
+          "properties": {
+            "geo": "Asia",
+            "region": "Asia Pacific Southeast",
+            "location": "Sydney, Australia",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            9999,
+            403
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Japan East",
+          "properties": {
+            "geo": "Asia",
+            "region": "Japan East",
+            "location": "Tokyo, Japan",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            9583,
+            7498
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Japan West",
+          "properties": {
+            "geo": "Asia",
+            "region": "Japan West",
+            "location": "Osaka, Japan",
+            "cdn": "CDN only (not a full Azure region)"
+          },
+          "coordinates": [
+            9426,
+            7395
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Asia Pacific East",
+          "properties": {
+            "geo": "Asia Pacific",
+            "region": "Asia Pacific East",
+            "location": "Hong Kong",
+            "failover_region": "Asia Pacific Southeast",
+            "scope": "All Windows Azure Services",
+            "status": "Production"
+          },
+          "coordinates": [
+            8646,
+            6136
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Asia Pacific Southeast",
+          "properties": {
+            "geo": "Asia Pacific",
+            "region": "Asia Pacific Southeast",
+            "location": "Singapore",
+            "failover_region": "Asia Pacific East",
+            "scope": "All Windows Azure Services",
+            "status": "Production"
+          },
+          "coordinates": [
+            8268,
+            3993
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Shanghai China",
+          "properties": {
+            "geo": "Asia Pacific",
+            "region": "Shanghai China",
+            "location": "Shanghai China",
+            "failover_region": "Beijing China",
+            "scope": "All Windows Azure Services",
+            "status": "Production"
+          },
+          "coordinates": [
+            8914,
+            7043
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Beijing China",
+          "properties": {
+            "geo": "Asia Pacific",
+            "region": "Beijing China",
+            "location": "Beijing, China",
+            "failover_region": "Shanghai China",
+            "scope": "All Windows Azure Services",
+            "status": "Production"
+          },
+          "coordinates": [
+            8727,
+            7928
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Australia East",
+          "properties": {
+            "geo": "Australia",
+            "region": "Australia East",
+            "location": "Sydney, New South Wales, Australia",
+            "failover_region": "Australia SE",
+            "scope": "All Windows Azure Services",
+            "status": "Production"
+          },
+          "coordinates": [
+            9999,
+            403
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Australia SE",
+          "properties": {
+            "geo": "Australia",
+            "region": "Australia SE",
+            "location": "Melbourne, Victoria, Australia",
+            "failover_region": "Australia East",
+            "scope": "All Windows Azure Services",
+            "status": "Production"
+          },
+          "coordinates": [
+            9772,
+            0
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Brazil South",
+          "properties": {
+            "geo": "South America",
+            "region": "Brazil South",
+            "location": "Brazil",
+            "failover_region": "US South Central",
+            "scope": "All Windows Azure Services",
+            "status": "Production"
+          },
+          "coordinates": [
+            2538,
+            2755
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Europe West",
+          "properties": {
+            "geo": "Europe",
+            "region": "Europe West",
+            "location": "Amsterdam, Netherlands",
+            "failover_region": "Europe North",
+            "scope": "All Windows Azure Services",
+            "status": "Production"
+          },
+          "coordinates": [
+            4651,
+            9196
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Europe North",
+          "properties": {
+            "geo": "Europe",
+            "region": "Europe North",
+            "location": "Dublin, Ireland",
+            "failover_region": "Europe West",
+            "scope": "All Windows Azure Services",
+            "status": "Production"
+          },
+          "coordinates": [
+            4245,
+            9298
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Japan East",
+          "properties": {
+            "geo": "Japan",
+            "region": "Japan East",
+            "location": "Saitama, Japan",
+            "failover_region": "Japan West",
+            "scope": "All Windows Azure Services",
+            "status": "Production"
+          },
+          "coordinates": [
+            9577,
+            7516
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "Japan West",
+          "properties": {
+            "geo": "Japan",
+            "region": "Japan West",
+            "location": "Osaka, Japan",
+            "failover_region": "Japan East",
+            "scope": "All Windows Azure Services",
+            "status": "Production"
+          },
+          "coordinates": [
+            9426,
+            7395
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "US North Central",
+          "properties": {
+            "geo": "United States",
+            "region": "US North Central",
+            "location": "Chicago, IL, USA",
+            "failover_region": "US South Central",
+            "scope": "All Windows Azure Services",
+            "status": "Production"
+          },
+          "coordinates": [
+            1271,
+            8130
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "US North Central",
+          "properties": {
+            "geo": "United States",
+            "region": "US North Central",
+            "location": "Chicago, IL, USA",
+            "failover_region": "US South Central",
+            "scope": "All Windows Azure Services",
+            "status": "Production"
+          },
+          "coordinates": [
+            1271,
+            8130
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "US Central",
+          "properties": {
+            "geo": "United States",
+            "region": "US Central",
+            "location": "Iowa, USA",
+            "failover_region": "US East 2",
+            "scope": "All Windows Azure Services",
+            "status": "Production"
+          },
+          "coordinates": [
+            1129,
+            8107
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "US East",
+          "properties": {
+            "geo": "United States",
+            "region": "US East",
+            "location": "Bristow, Virginia, USA",
+            "failover_region": "US West",
+            "scope": "All Windows Azure Services",
+            "status": "Production"
+          },
+          "coordinates": [
+            1640,
+            7809
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "US East 2",
+          "properties": {
+            "geo": "United States",
+            "region": "US East 2",
+            "location": "Virginia, USA",
+            "failover_region": "US Central",
+            "scope": "All Windows Azure Services",
+            "status": "Preview"
+          },
+          "coordinates": [
+            1598,
+            7684
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "US West",
+          "properties": {
+            "geo": "United States",
+            "region": "US West",
+            "location": "San Francisco, California, USA",
+            "failover_region": "US East",
+            "scope": "All Windows Azure Services",
+            "status": "Production"
+          },
+          "coordinates": [
+            0,
+            7711
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "US Gov-Iowa",
+          "properties": {
+            "geo": "United States",
+            "region": "US Gov-Iowa",
+            "location": "Iowa, USA",
+            "failover_region": "US Gov-Virginia",
+            "scope": "All Windows Azure Services",
+            "status": "Preview"
+          },
+          "coordinates": [
+            1129,
+            8107
+          ]
+        },
+        {
+          "type": "Point",
+          "id": "US Gov-Virginia",
+          "properties": {
+            "geo": "United States",
+            "region": "US Gov-Virginia",
+            "location": "Virginia, USA",
+            "failover_region": "US Gov-Iowa",
+            "scope": "All Windows Azure Services",
+            "status": "Production"
+          },
+          "coordinates": [
+            1598,
+            7684
+          ]
+        },
+        {
+          "type": "LineString",
+          "id": "Asia Pacific East",
+          "properties": {
+            "region": "Asia Pacific East",
+            "failover_region": "Asia Pacific Southeast"
+          },
+          "arcs": [0]
+        },
+        {
+          "type": "LineString",
+          "id": "Asia Pacific Southeast",
+          "properties": {
+            "region": "Asia Pacific Southeast",
+            "failover_region": "Asia Pacific East"
+          },
+          "arcs": [-1]
+        },
+        {
+          "type": "LineString",
+          "id": "Shanghai China",
+          "properties": {
+            "region": "Shanghai China",
+            "failover_region": "Beijing China"
+          },
+          "arcs": [1]
+        },
+        {
+          "type": "LineString",
+          "id": "Beijing China",
+          "properties": {
+            "region": "Beijing China",
+            "failover_region": "Shanghai China"
+          },
+          "arcs": [-2]
+        },
+        {
+          "type": "LineString",
+          "id": "Australia East",
+          "properties": {
+            "region": "Australia East",
+            "failover_region": "Australia SE"
+          },
+          "arcs": [2]
+        },
+        {
+          "type": "LineString",
+          "id": "Australia SE",
+          "properties": {
+            "region": "Australia SE",
+            "failover_region": "Australia East"
+          },
+          "arcs": [-3]
+        },
+        {
+          "type": "LineString",
+          "id": "Europe West",
+          "properties": {
+            "region": "Europe West",
+            "failover_region": "Europe North"
+          },
+          "arcs": [3]
+        },
+        {
+          "type": "LineString",
+          "id": "Europe North",
+          "properties": {
+            "region": "Europe North",
+            "failover_region": "Europe West"
+          },
+          "arcs": [-4]
+        },
+        {
+          "type": "LineString",
+          "id": "Japan East",
+          "properties": {
+            "region": "Japan East",
+            "failover_region": "Japan West"
+          },
+          "arcs": [4]
+        },
+        {
+          "type": "LineString",
+          "id": "Japan West",
+          "properties": {
+            "region": "Japan West",
+            "failover_region": "Japan East"
+          },
+          "arcs": [-5]
+        },
+        {
+          "type": "LineString",
+          "id": "US Central",
+          "properties": {
+            "region": "US Central",
+            "failover_region": "US East 2"
+          },
+          "arcs": [5]
+        },
+        {
+          "type": "LineString",
+          "id": "US East",
+          "properties": {
+            "region": "US East",
+            "failover_region": "US West"
+          },
+          "arcs": [6]
+        },
+        {
+          "type": "LineString",
+          "id": "US East 2",
+          "properties": {
+            "region": "US East 2",
+            "failover_region": "US Central"
+          },
+          "arcs": [-6]
+        },
+        {
+          "type": "LineString",
+          "id": "US West",
+          "properties": {
+            "region": "US West",
+            "failover_region": "US East"
+          },
+          "arcs": [-7]
+        },
+        {
+          "type": "LineString",
+          "id": "US Gov-Iowa",
+          "properties": {
+            "region": "US Gov-Iowa",
+            "failover_region": "US Gov-Virginia"
+          },
+          "arcs": [5]
+        },
+        {
+          "type": "LineString",
+          "id": "US Gov-Virginia",
+          "properties": {
+            "region": "US Gov-Virginia",
+            "failover_region": "US Gov-Iowa"
+          },
+          "arcs": [-6]
+        }
+      ]
+    }
+  },
+  "arcs": [
+    [
+      [
+        8646,
+        6136
+      ],
+      [
+        -378,
+        -2143
+      ]
+    ],
+    [
+      [
+        8914,
+        7043
+      ],
+      [
+        -187,
+        885
+      ]
+    ],
+    [
+      [
+        9999,
+        403
+      ],
+      [
+        -227,
+        -403
+      ]
+    ],
+    [
+      [
+        4651,
+        9196
+      ],
+      [
+        -406,
+        102
+      ]
+    ],
+    [
+      [
+        9577,
+        7516
+      ],
+      [
+        -151,
+        -121
+      ]
+    ],
+    [
+      [
+        1129,
+        8107
+      ],
+      [
+        469,
+        -423
+      ]
+    ],
+    [
+      [
+        1640,
+        7809
+      ],
+      [
+        -1640,
+        -98
+      ]
+    ]
+  ],
+  "transform": {
+    "scale": [
+      0.02736500075177518,
+      0.00980421032520252
+    ],
+    "translate": [
+      -122.419639587,
+      -37.8242988586
+    ]
+  }
+}
