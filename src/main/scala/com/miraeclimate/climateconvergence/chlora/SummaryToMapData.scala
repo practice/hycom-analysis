@@ -16,23 +16,25 @@ object SummaryToMapData {
   def main(args: Array[String]) {
 
     case class Item(lat: Float, lng: Float, v: Float)
-
-    val items = Source.fromFile("/Users/shawn/temp/chlora/summary-2013-08.csv").getLines().map { line =>
-      val lineItems: Array[String] = line.split(",")
-      val lat = lineItems(2)
-      val lng = lineItems(3)
-      val v = lineItems(5)
-      Item(lat.toFloat, lng.toFloat, v.toFloat)
-    }.toList
-
     implicit val formats = Serialization.formats(NoTypeHints)
-    val json: String = write(items)
-    println(json)
 
-    val writer: FileWriter = new FileWriter("/Users/shawn/temp/chlora/mapdata-2013-08.json")
-    items.foreach { item =>
-
+    val jsonList = for {
+      year <- 2013 to 2013;
+      month <- 1 to 12
+      path = f"/Users/shawn/temp/chlora/$year-${month}%02d.csv"
+    } yield {
+      val items = Source.fromFile(path).getLines().map { line =>
+        val lineItems: Array[String] = line.split(",")
+        val lat = lineItems(2)
+        val lng = lineItems(3)
+        val v = lineItems(5)
+        Item(lat.toFloat, lng.toFloat, v.toFloat)
+      }.toList
+      val json = write(items) // emits json string
+      val writer: FileWriter = new FileWriter(f"/Users/shawn/temp/chlora/mapdata-${year}-${month}%02d.json")
+      writer.write(json)
+      writer.close()
+        json
     }
-    writer.close()
   }
 }
